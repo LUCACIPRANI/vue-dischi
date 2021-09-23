@@ -1,51 +1,51 @@
 <template>
-<!-- <div class="container-d"> -->
-  <div class="Discs">
-    <img class="img-fluid mt-4" :src="discoProp.poster" :alt="discoProp.title">
-    <h6 class="pt-3 px-3">{{ discoProp.title.toUpperCase() }}</h6>
-    <div class="second-color">{{ discoProp.author }}</div>
-    <div class="second-color">{{ discoProp.year }}</div>
-  </div>
-<!-- </div> -->
+  <div class="single-song mb-2 d-flex flex-column justify-content-around align-items-center text-center">
+        <div class="image">
+            <img :src="singleSong.poster" class="img-fluid" :alt="singleSong.title">
+        </div>
+        <h3 class="title">
+            {{singleSong.title}}
+        </h3>
+        <div class="text">
+            <span class="otherText d-block">
+                {{singleSong.author}}
+            </span>
+            <span style="font-size:80%;" class="otherText d-block">
+                {{singleSong.year}}
+            </span>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-  name: "Discs",
-  props: ["discoProp"],
-};
+    name: 'SongCard',
+    props: ['singleSong']
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-@import "@/style/mixin";
-@import "@/style/general";
-@import "@/style/vars";
+<style lang="scss" scoped>
+@import '@/styles/general.scss';
 
-.Discs{
-  background-color: #2D3B46;
-  height: 300px;
-  width: 170px;
-  text-align: center;
-  color: white;
-  padding: 0 20px;
-  img{
-    height: 130px;
-    width: 130px;
-  }
-  .second-color{
-    color: $secondcolor;
-    font-size: 15px;
-  }
-  h6{
-    font-weight: 700;
-  }
+.single-song{
+    background: $thirdcolor;
+    min-height: 300px;
+    flex-basis: 200px;
+    flex-wrap: wrap;
+    .image{
+        width: 150px;
+        img{
+            width: 100%;
+        }
+    }
+    .title{
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .otherText{
+        color: $secondcolor;
+    }
 }
-
-@media only screen and (min-width: 600px )  {
-  .container-d {
-    width: calc(100% / 5);
-  }
-}
-
 </style>

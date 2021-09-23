@@ -28,9 +28,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import "../style/vars";
-@import "../style/mixin";
-
+@import "@/styles/vars";
+@import "@/styles/mixin";
 
 .loader {
   position: fixed;
@@ -53,7 +52,7 @@ export default {
 
   @keyframes pulse {
     from {
-      transform: scale(1);
+      transform: scale(0.5);
     }
     to {
       transform: scale(2);
