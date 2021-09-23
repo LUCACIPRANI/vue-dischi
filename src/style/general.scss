@@ -1,0 +1,22 @@
+
+@import '~bootstrap/scss/bootstrap';
+
+@import '~@fontsource/montserrat/index.css';
+@import '~@fontsource/montserrat/700.css';
+
+
+// Importo file SCSS
+@import './vars';
+@import './mixin';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $main-font;
+    background-color: $primarycolor;
+}

@@ -1,0 +1,29 @@
+@mixin center($type: 'both') {
+    display: flex;
+    flex-direction: row;
+
+    @if $type == 'horizontal' {
+        justify-content: center;
+    }
+    @else if $type == 'vertical' {
+        align-items: center;
+    }
+    @else if $type == 'both' {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin startJC($type: 'flex-start') {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin endJC($type: 'flex-end') {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
