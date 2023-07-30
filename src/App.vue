@@ -45,6 +45,6 @@ export default {
 <style lang="scss">
 @import "@/styles/general.scss";
 h1 {
-  color: white;
+  color: black;
 }
 </style>
